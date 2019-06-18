@@ -26,3 +26,24 @@ fds.putObject(bucket_name,object_name,'file content',cb)
 // 删除文件
 fds.deleteObjects(bucket_name,object_name,cb)
 ```
+
+## webpack 
+```
+
+module.exports = {
+    entry:{
+        index: './a.js'
+    }
+    output:{
+        filename:'js/a.js'
+    } 
+    plugins: [
+        new MiFdsWebpackPlugin({
+          id,
+          key,
+          url,
+          bucket
+        })
+      ]
+}
+```
